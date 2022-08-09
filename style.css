@@ -1,16 +1,11 @@
-/*#candidate {
-    border-radius: 0%;
-    border-color: aquamarine;
-    box-sizing: border-box;
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 300px;
 }
 
-.buttonClass {
-    border-radius: 0%;
-    border-color: aqua;
-    border-style: inherit;
+.errormessage {
+    display: none;
+    color: red;
 }
-
-button:hover {
-    background-color: green;
-}
-*/
