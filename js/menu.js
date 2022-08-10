@@ -57,7 +57,7 @@ class Book {
 
   displayBooks(object){
     return `<li class="${object.author}">
-      <span class="title">${object.book} by ${object.author}</span>
+      <span class="title">${object.author} by ${object.book}</span>
       <button class="remove">remove</button></li>`;
   };
 
