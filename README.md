@@ -1,9 +1,6 @@
 
 # Awesome Books
 
-![screenshot](./images/readme.jpg)
-
-
 ## Built With
 
 - HTML
