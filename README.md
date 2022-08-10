@@ -1,13 +1,12 @@
 
 # Awesome Books
 
-![screenshot](./images/readme.jpg)
-
-> This is my capstone project built with HTML-CSS-BOOTSTRAP-JAVASCRIPT. My love for restaurants made me develop this project along that line. The website is about a popular restuarant called YOD Abbisinia restaurant. It features a list of dishes, an about page and partner sections. Please have a look at the live demo and let me know what you think 😊.
+![screenshot](./images/awesome-books.png)
 
 ## Built With
 
 - HTML
+- CSS
 - JavaScript.
 
 ## LIVE DEMO
@@ -51,9 +50,10 @@ If you are non a technical person you can download the zip file.
 - LinkedIn: [Bantealem](https://www.linkedin.com/in/bantealem-geto-a301b9213/)
 
 👤 **Author2**
+
 - GitHub: [@Sonickmumba](https://github.com/Sonickmumba)
--Twitter: [@Sonick](https://twitter.com/MumbaSonick)
--LinkedIn: [Sonick Mumba](https://www.linkedin.com/in/sonick-m-301557a2/)
+- Twitter: [@Sonick](https://twitter.com/MumbaSonick)
+- LinkedIn: [Sonick Mumba](https://www.linkedin.com/in/sonick-m-301557a2/)
 
 
 ## 🤝 Contributing

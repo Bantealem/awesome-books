@@ -1,11 +1,87 @@
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: 300px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .errormessage {
   display: none;
   color: red;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 500px;
+  height: auto;
+}
+
+.wrapper ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.library li {
+  padding: 8px;
+}
+
+.wrapper ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  border-radius: 8px;
+}
+
+.line {
+  border-bottom: 2px solid lightgray;
+  width: 100px;
+}
+
+.library li:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 200px;
+}
+
+.form button {
+  width: 50%;
+  height: 25px;
+  background-color: lightgrey;
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  color: black;
+  float: right;
+  margin-left: 100px;
+}
+
+.wrapper .library button {
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  padding: 4px;
+  width: 60px;
+}
+
+.form input {
+  height: 25px;
+  font-size: 16px;
+  padding: 4px 8px;
+  border: 1px solid darkgray;
+  border-radius: 8px;
 }

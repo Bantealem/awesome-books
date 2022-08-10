@@ -5,71 +5,74 @@ const inputBook = document.querySelector('.input-book');
 const errorMessage = document.querySelector('.errormessage');
 const storedBooks = JSON.parse(localStorage.getItem('books'));
 let bookShelf = [];
-let filter = [];
-
-function libraryBooks(object) {
-  return `<div class="${object.author}">
-    <h1>${object.book}</h1>
-    <p>${object.author}</p> 
-    <hr> 
-    <button class="remove">
-    remove
-    </button>
-    </div>`;
-}
-
-function remove() {
-  if (bookShelf.length > 0) {
-    const removebtn = document.querySelectorAll('.remove');
-    removebtn.forEach((element) => element.addEventListener('click', () => {
-      const parentNodeClass = element.parentNode.className;
-      element.parentNode.remove();
-      bookShelf = bookShelf.filter((x) => x.author !== parentNodeClass);
-      localStorage.setItem('books', JSON.stringify(bookShelf));
-    }));
+class Book {
+  constructor(author, book) {
+    this.author = author;
+    this.book = book;
   }
-}
 
-function add() {
-  if (inputAuthor.value !== '' && inputBook.value !== '') {
-    const currentBook = [];
-    currentBook.push(
-      {
-        author: inputAuthor.value,
-        book: inputBook.value,
-      },
-    );
-    filter = bookShelf.filter((x) => x.book === currentBook[0].book);
-    if (filter.length > 0) {
-      errorMessage.style.display = 'unset';
-      inputAuthor.value = '';
-      inputBook.value = '';
+  add() {
+    if (inputAuthor.value !== '' && inputBook.value !== '') {
+      const currentBook = [];
+      currentBook.push(
+        {
+          author: inputAuthor.value,
+          book: inputBook.value,
+        },
+      );
+      this.filter = bookShelf.filter((x) => x.book === currentBook[0].book);
+      if (this.filter.length > 0) {
+        errorMessage.style.display = 'unset';
+        inputAuthor.value = '';
+        inputBook.value = '';
+      }
+      bookShelf.push(
+        {
+          author: inputAuthor.value,
+          book: inputBook.value,
+        },
+      );
+      if (bookShelf.length > 0) {
+        currentBook.forEach((book) => library.insertAdjacentHTML('beforeend', this.displayBooks(book)));
+      }
     }
-    bookShelf.push(
-      {
-        author: inputAuthor.value,
-        book: inputBook.value,
-      },
-    );
+    inputAuthor.value = '';
+    inputBook.value = '';
+    localStorage.setItem('books', JSON.stringify(bookShelf));
+  }
+  /* eslint-disable */
+  remove() {
     if (bookShelf.length > 0) {
-      currentBook.forEach((book) => library.insertAdjacentHTML('beforeend', libraryBooks(book)));
+      const removebtn = document.querySelectorAll('.remove');
+      removebtn.forEach((element) => element.addEventListener('click', () => {
+        const parentNodeClass = element.parentNode.className;
+        element.parentNode.remove();
+        bookShelf = bookShelf.filter((x) => x.author !== parentNodeClass);
+        localStorage.setItem('books', JSON.stringify(bookShelf));
+      }));
     }
-  }
-  inputAuthor.value = '';
-  inputBook.value = '';
-  localStorage.setItem('books', JSON.stringify(bookShelf));
-}
+  };
+
+  displayBooks(object){
+    return `<li class="${object.author}">
+      <span class="title">${object.author} by ${object.book}</span>
+      <button class="remove">remove</button></li>`;
+  };
+
+};
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  add();
-  remove();
+  const newBook = new Book();
+  newBook.add();
+  newBook.remove();
 });
 
 if (storedBooks !== null) {
   bookShelf = storedBooks;
   bookShelf.forEach((book) => {
-    library.insertAdjacentHTML('beforeend', libraryBooks(book));
-    remove();
+    const newBook = new Book();
+    library.insertAdjacentHTML('beforeend', newBook.displayBooks(book));
+    newBook.remove();
   });
-}
+};
