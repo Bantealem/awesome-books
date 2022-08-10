@@ -59,6 +59,17 @@ body {
   width: 200px;
 }
 
+.form button {
+  width: 50%;
+  height: 25px;
+  background-color: lightgrey;
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  color: black;
+  float: right;
+  margin-left: 100px;
+}
+
 .wrapper .library button {
   color: black;
   border: 1px solid darkgray;
@@ -74,15 +85,3 @@ body {
   border: 1px solid darkgray;
   border-radius: 8px;
 }
-
-.form button {
-  width: 50%;
-  height: 25px;
-  background-color: lightgrey;
-  border: 1px solid darkgray;
-  border-radius: 8px;
-  color: black;
-  float: right;
-  margin-left: 100px;
-}
-
