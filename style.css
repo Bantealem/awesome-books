@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
 }
+
 .errormessage {
   display: none;
   color: red;
@@ -25,23 +26,21 @@ body {
   width: 100%;
 }
 
+.library li {
+  padding: 8px;
+}
+
 .wrapper ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 .library {
   /* border: 2px solid lightgray; */
-  box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   padding: 0;
   border-radius: 8px;
-}
-
-.library li {
-  padding: 8px;
-  /* border-radius: 8px; */
 }
 
 .line {
@@ -63,7 +62,7 @@ body {
 button {
   /* background-color: #003366; */
   color: #fff;
-  border:none;
+  border: none;
   border-radius: 8px;
   padding: 4px;
   width: 60px;
@@ -74,7 +73,5 @@ button {
   color: black;
   position: relative;
   float: right;
+  margin-left: 120px;
 }
-
-
-
