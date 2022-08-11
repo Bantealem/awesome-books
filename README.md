@@ -1,7 +1,8 @@
 
 # Awesome Books
+We have build a Awesome Book website. It is able to add and remove books.
 
-![screenshot](./images/awesome-books.png)
+![screenshot](./images/full-project.png)
 
 ## Built With
 
