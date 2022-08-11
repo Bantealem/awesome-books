@@ -118,6 +118,8 @@ const formContainer = document.querySelector('.form-container');
 listBtn.addEventListener('click', () => {
   bookList.style.display = 'block';
   formContainer.style.display = 'none';
+  contactInfo.style.display = 'none';
+
 });
 
 window.addEventListener('load', () => {
@@ -142,5 +144,5 @@ const contactInfo = document.querySelector('.contact-info');
 contactBtn.addEventListener('click', () => {
   bookList.style.display = 'none';
   formContainer.style.display = 'none';
-  contactInfo.style.display = 'block';
+  contactInfo.style.display = 'flex';
 });
