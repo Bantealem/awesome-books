@@ -1,87 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
-
 body {
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
-.errormessage {
-  display: none;
-  color: red;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.main-container {
+  max-width: 2000px;
   margin: 0 auto;
-  width: 500px;
-  height: auto;
 }
 
-.wrapper ul {
+.hr {
+  width: 100px;
+  border: 1px solid gray;
+}
+
+form {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: end;
+}
+
+#book-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid gray;
+}
+
+.book-list-container {
+  display: none;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 5px;
+}
+
+.bookTitle {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+span {
+  margin-right: 10px;
+}
+
+.bookList1 {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 40px;
+  position: relative;
 }
 
-.library li {
-  padding: 8px;
+.bookList1:nth-child(even) {
+  background: #ccc;
 }
 
-.wrapper ul li {
+.bookList1:nth-child(odd) {
+  background: #fff;
+}
+
+.delete {
+  position: absolute;
+  right: 20px;
+  top: 20%;
+}
+
+button {
+  padding: 5px;
+}
+
+/* nav */
+nav {
   display: flex;
   justify-content: space-between;
+  border: 2px solid gray;
+  padding: 0 20px;
   align-items: center;
+  font-size: large;
 }
 
-.library {
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-  padding: 0;
-  border-radius: 8px;
+.logo {
+  margin: 0;
 }
 
-.line {
-  border-bottom: 2px solid lightgray;
-  width: 100px;
-}
-
-.library li:nth-child(odd) {
-  background-color: lightgrey;
-}
-
-.form {
+nav ul {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 200px;
 }
 
-.form button {
-  width: 50%;
-  height: 25px;
-  background-color: lightgrey;
-  border: 1px solid darkgray;
-  border-radius: 8px;
-  color: black;
-  float: right;
-  margin-left: 100px;
+nav ul li {
+  list-style: none;
+  margin-left: 10px;
+  border-right: 2px solid gray;
+  padding: 4px 0;
+  padding-right: 10px;
+  cursor: pointer;
 }
 
-.wrapper .library button {
-  color: black;
-  border: 1px solid darkgray;
-  border-radius: 8px;
-  padding: 4px;
-  width: 60px;
+.contact-info p,
+.contact-info li {
+  text-align: start;
 }
 
-.form input {
-  height: 25px;
-  font-size: 16px;
-  padding: 4px 8px;
-  border: 1px solid darkgray;
-  border-radius: 8px;
+nav li:hover {
+  color: blue;
+}
+
+.contact {
+  border: none;
+}
+
+.form-container {
+  display: none;
+}
+
+#current-date {
+  font-size: small;
+  text-align: right;
+  font-weight: 600;
+}
+
+footer {
+  position: absolute;
+  border: 2px solid gray;
+  padding: 0 20px;
+  bottom: 2em;
+  width: 1500px;
+  box-sizing: border-box;
+  text-align: start;
+}
+
+.contact-info {
+  display: none;
+  font-size: large;
 }
