@@ -3,7 +3,7 @@ body {
 }
 
 .main-container {
-  max-width: 2000px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -96,6 +96,7 @@ nav ul li {
 .contact-info p,
 .contact-info li {
   text-align: start;
+  margin-bottom: 0;
 }
 
 nav li:hover {
@@ -114,6 +115,8 @@ nav li:hover {
   font-size: small;
   text-align: right;
   font-weight: 600;
+  /* margin-top: 1rem; */
+  margin: 1rem 1rem 0 0;
 }
 
 footer {
@@ -121,12 +124,17 @@ footer {
   border: 2px solid gray;
   padding: 0 20px;
   bottom: 2em;
-  width: 1500px;
+  width: 100%;
   box-sizing: border-box;
-  text-align: start;
+  text-align: center;
 }
 
 .contact-info {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
   font-size: large;
 }
