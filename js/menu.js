@@ -1,13 +1,11 @@
-/*classes for books*/
-
+/* classes for books */
+/* eslint-disable */
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
 }
-
-// UI Class: Handle UI Tasks
 class UI {
   static displayBooks() {
     const books = Store.getBooks();
@@ -115,11 +113,13 @@ const bookList = document.querySelector('.book-list-container');
 const listBtn = document.querySelector('.listBtn');
 const formContainer = document.querySelector('.form-container');
 
+const contactBtn = document.querySelector('.contact');
+const contactInfo = document.querySelector('.contact-info');
+
 listBtn.addEventListener('click', () => {
   bookList.style.display = 'block';
   formContainer.style.display = 'none';
   contactInfo.style.display = 'none';
-
 });
 
 window.addEventListener('load', () => {
@@ -138,8 +138,6 @@ addNewBtn.addEventListener('click', () => {
 });
 
 // display the  Contact section when click the button "Contact"
-const contactBtn = document.querySelector('.contact');
-const contactInfo = document.querySelector('.contact-info');
 
 contactBtn.addEventListener('click', () => {
   bookList.style.display = 'none';
